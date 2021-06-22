@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/parent/feign/feign.iml" filepath="$PROJECT_DIR$/parent/feign/feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/gateway/gateway.iml" filepath="$PROJECT_DIR$/parent/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/goods/goods.iml" filepath="$PROJECT_DIR$/parent/goods/goods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/shopk.iml" filepath="$PROJECT_DIR$/parent/shopk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring-cloud-feign-demo.iml" filepath="$PROJECT_DIR$/.idea/spring-cloud-feign-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/user/user.iml" filepath="$PROJECT_DIR$/parent/user/user.iml" />
+    </modules>
+  </component>
+</project>

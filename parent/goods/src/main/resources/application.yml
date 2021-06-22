@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: shopk-goods
+  datasource:
+    url: jdbc:mysql://localhost:3306/shopk?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:1000
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080
+      datasource:
+        ds1:
+          file:
+            file: classpath:sentinelrules.json
+            data-type: json
+            rule-type: flow
+        ds2:
+          nacos:
+            server-addr: 127.0.0.1:1000
+            dataId: shopk-goods-sentinelrules
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+
+feign:
+  sentinel:
+    enabled: true
+server:
+  port: 9001

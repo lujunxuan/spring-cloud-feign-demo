@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:1000
+        file-extension: yml
+        group: shopk
+        prefix: shopk-goods
+        namespace: 0f200d7f-1619-49e4-bb2d-7d4b7581a5db
+
+  profiles:
+        active: dev
+

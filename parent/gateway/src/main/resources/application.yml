@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: shopk-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:1000
+    gateway:
+      routes:
+        - id: shopk-goods
+          uri: lb://shopk-goods
+          predicates:
+            - Path=/goods/**
+          filters:
+            - StripPrefix=1
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      scg:
+        fallback:
+          mode: response
+          response-status: 426
+          response-body: error request
+server:
+  port: 9003
